@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SocialSharing" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jv2-wM-RLm">
+                                <rect key="frame" x="16" y="250" width="343" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="WFH-KD-y6r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="fWI-lR-fax">
+                                <rect key="frame" x="16" y="20" width="343" height="222"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Sw-J8-NiM">
+                                <rect key="frame" x="16" y="300" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="MSj-kN-bmH"/>
+                                </constraints>
+                                <state key="normal" title="Facebook"/>
+                                <connections>
+                                    <action selector="postToFacebook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uMp-2A-RED"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KcI-hc-eJl">
+                                <rect key="frame" x="16" y="338" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Hbb-QQ-XPb"/>
+                                </constraints>
+                                <state key="normal" title="Twitter"/>
+                                <connections>
+                                    <action selector="postToFacebook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A2J-xD-2AA"/>
+                                    <action selector="postToTwitter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tPs-Hi-b5c"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KcI-hc-eJl" firstAttribute="top" secondItem="7Sw-J8-NiM" secondAttribute="bottom" constant="8" symbolic="YES" id="4G8-OM-sen"/>
+                            <constraint firstItem="fWI-lR-fax" firstAttribute="trailing" secondItem="Jv2-wM-RLm" secondAttribute="trailing" id="4zR-yL-w2s"/>
+                            <constraint firstItem="7Sw-J8-NiM" firstAttribute="leading" secondItem="KcI-hc-eJl" secondAttribute="leading" id="DQL-tG-AYM"/>
+                            <constraint firstItem="7Sw-J8-NiM" firstAttribute="top" secondItem="Jv2-wM-RLm" secondAttribute="bottom" constant="8" symbolic="YES" id="H4O-yJ-ALP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KcI-hc-eJl" secondAttribute="bottom" constant="299" id="MPq-cl-Jfd"/>
+                            <constraint firstItem="fWI-lR-fax" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="NG0-5N-Hv1"/>
+                            <constraint firstItem="7Sw-J8-NiM" firstAttribute="trailing" secondItem="KcI-hc-eJl" secondAttribute="trailing" id="cxc-zO-OHW"/>
+                            <constraint firstItem="fWI-lR-fax" firstAttribute="leading" secondItem="Jv2-wM-RLm" secondAttribute="leading" id="dhQ-of-4oF"/>
+                            <constraint firstItem="Jv2-wM-RLm" firstAttribute="trailing" secondItem="7Sw-J8-NiM" secondAttribute="trailing" id="dmn-x2-NoY"/>
+                            <constraint firstItem="Jv2-wM-RLm" firstAttribute="leading" secondItem="7Sw-J8-NiM" secondAttribute="leading" id="hJy-wY-Ipq"/>
+                            <constraint firstItem="fWI-lR-fax" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="q2y-W0-9dg"/>
+                            <constraint firstItem="Jv2-wM-RLm" firstAttribute="top" secondItem="fWI-lR-fax" secondAttribute="bottom" constant="8" symbolic="YES" id="vnd-7Y-dRy"/>
+                            <constraint firstItem="fWI-lR-fax" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="x7X-4V-UT6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="fWI-lR-fax" id="YOs-Qy-Xvm"/>
+                        <outlet property="label" destination="Jv2-wM-RLm" id="aHy-uQ-dC7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-98.400000000000006" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="photo" width="5472" height="3648"/>
+    </resources>
+</document>
